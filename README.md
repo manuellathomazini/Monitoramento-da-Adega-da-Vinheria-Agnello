@@ -99,22 +99,35 @@ Se preferir, exporte o `diagram.json` diretamente do seu projeto no Wokwi, que Ã
 ```json
 {
   "version": 1,
-  "author": "Grupo Vinheria Agnello",
+  "author": "Manuella",
   "editor": "wokwi",
   "parts": [
-    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
-    { "type": "wokwi-dht22", "id": "dht1", "top": -90, "left": 120, "attrs": {} },
-    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 120, "left": 220, "attrs": {} }
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 0.3,
+      "left": 148.2,
+      "attrs": { "temperature": "24", "humidity": "60" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 195,
+      "left": 113.2,
+      "rotate": 180,
+      "attrs": {}
+    }
   ],
   "connections": [
-    [ "esp:TX", "$serialMonitor:RX", "", [] ],
-    [ "esp:RX", "$serialMonitor:TX", "", [] ],
-    [ "dht1:VCC", "esp:3V3", "red", [] ],
-    [ "dht1:GND", "esp:GND.1", "black", [] ],
-    [ "dht1:SDA", "esp:4", "green", [] ],
-    [ "ldr1:VCC", "esp:3V3", "red", [] ],
-    [ "ldr1:GND", "esp:GND.1", "black", [] ],
-    [ "ldr1:AO", "esp:34", "orange", [] ]
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "dht1:SDA", "esp:D4", "green", [ "v0" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "h0" ] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [ "h0" ] ],
+    [ "ldr1:AO", "esp:D34", "green", [ "h0" ] ]
   ],
   "dependencies": {}
 }
