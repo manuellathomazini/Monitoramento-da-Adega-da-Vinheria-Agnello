@@ -1,0 +1,224 @@
+{
+  "info": {
+    "name": "Vinheria Agnello - FIWARE (simples)",
+    "description": "Importe junto o Environment e defina a variavel url com o IP do servidor FIWARE. Execute na ordem.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Health Check - IoT Agent MQTT",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "protocol": "http",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "4041",
+          "path": [
+            "iot",
+            "about"
+          ],
+          "raw": "http://{{url}}:4041/iot/about"
+        }
+      }
+    },
+    {
+      "name": "2. Health Check - Orion",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "protocol": "http",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "1026",
+          "path": [
+            "version"
+          ],
+          "raw": "http://{{url}}:1026/version"
+        }
+      }
+    },
+    {
+      "name": "3. Health Check - STH-Comet",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "protocol": "http",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "8666",
+          "path": [
+            "version"
+          ],
+          "raw": "http://{{url}}:8666/version"
+        }
+      }
+    },
+    {
+      "name": "4. Consultar Entidade (Orion)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "fiware-service",
+            "value": "smart",
+            "type": "text"
+          },
+          {
+            "key": "fiware-servicepath",
+            "value": "/",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "protocol": "http",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "1026",
+          "path": [
+            "v2",
+            "entities",
+            "urn:ngsi-ld:IndoorEnvironmentObserved:888"
+          ],
+          "raw": "http://{{url}}:1026/v2/entities/urn:ngsi-ld:IndoorEnvironmentObserved:888"
+        }
+      }
+    },
+    {
+      "name": "5. Histórico - Temperatura (últimas 10)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "fiware-service",
+            "value": "smart",
+            "type": "text"
+          },
+          {
+            "key": "fiware-servicepath",
+            "value": "/",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "protocol": "http",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "8666",
+          "path": [
+            "STH",
+            "v1",
+            "contextEntities",
+            "type",
+            "IndoorEnvironmentObserved",
+            "id",
+            "urn:ngsi-ld:IndoorEnvironmentObserved:888",
+            "attributes",
+            "temperature"
+          ],
+          "query": [
+            {
+              "key": "lastN",
+              "value": "10"
+            }
+          ],
+          "raw": "http://{{url}}:8666/STH/v1/contextEntities/type/IndoorEnvironmentObserved/id/urn:ngsi-ld:IndoorEnvironmentObserved:888/attributes/temperature?lastN=10"
+        }
+      }
+    },
+    {
+      "name": "6. Histórico - Umidade (últimas 10)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "fiware-service",
+            "value": "smart",
+            "type": "text"
+          },
+          {
+            "key": "fiware-servicepath",
+            "value": "/",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "protocol": "http",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "8666",
+          "path": [
+            "STH",
+            "v1",
+            "contextEntities",
+            "type",
+            "IndoorEnvironmentObserved",
+            "id",
+            "urn:ngsi-ld:IndoorEnvironmentObserved:888",
+            "attributes",
+            "relativeHumidity"
+          ],
+          "query": [
+            {
+              "key": "lastN",
+              "value": "10"
+            }
+          ],
+          "raw": "http://{{url}}:8666/STH/v1/contextEntities/type/IndoorEnvironmentObserved/id/urn:ngsi-ld:IndoorEnvironmentObserved:888/attributes/relativeHumidity?lastN=10"
+        }
+      }
+    },
+    {
+      "name": "7. Histórico - Luminosidade (últimas 10)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "fiware-service",
+            "value": "smart",
+            "type": "text"
+          },
+          {
+            "key": "fiware-servicepath",
+            "value": "/",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "protocol": "http",
+          "host": [
+            "{{url}}"
+          ],
+          "port": "8666",
+          "path": [
+            "STH",
+            "v1",
+            "contextEntities",
+            "type",
+            "IndoorEnvironmentObserved",
+            "id",
+            "urn:ngsi-ld:IndoorEnvironmentObserved:888",
+            "attributes",
+            "illuminance"
+          ],
+          "query": [
+            {
+              "key": "lastN",
+              "value": "10"
+            }
+          ],
+          "raw": "http://{{url}}:8666/STH/v1/contextEntities/type/IndoorEnvironmentObserved/id/urn:ngsi-ld:IndoorEnvironmentObserved:888/attributes/illuminance?lastN=10"
+        }
+      }
+    }
+  ]
+}
