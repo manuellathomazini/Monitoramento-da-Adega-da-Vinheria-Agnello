@@ -2,14 +2,14 @@
 
 Projeto IoT com **ESP32 + DHT22 + LDR** simulado no **Wokwi**, enviando dados por **MQTT** para a plataforma **FIWARE**, no padrão **Smart Data Models** (`IndoorEnvironmentObserved`) e **NGSIv2**. O back-end usa **IoT Agent MQTT**, **Orion Context Broker** e **STH-Comet**, e as checagens são feitas por uma **coleção do Postman** incluída neste repositório.
 
-> **Integrantes:** 
+> - **Integrantes:** 
 Manuella Sousa Thomazini - RM 573606
 Renan Carlos Silva Bonanno - RM 573043
 Murillo Dourado Vieira - RM 571912
 Henrique Gumbys Pagliato - RM 570914
-> **Repositório no GitHub:** https://github.com/manuellathomazini/Monitoramento-da-Adega-da-Vinheria-Agnello.git
-> **Link do projeto no Wokwi:** https://wokwi.com/projects/477403690792711169
-> **Link do vídeo (hands-on):** https://youtu.be/1pYxvc58QRk
+> - **Repositório no GitHub:** https://github.com/manuellathomazini/Monitoramento-da-Adega-da-Vinheria-Agnello.git
+> - **Link do projeto no Wokwi:** https://wokwi.com/projects/477403690792711169
+> - **Link do vídeo (hands-on):** https://youtu.be/1pYxvc58QRk
 
 ---
 
