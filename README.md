@@ -8,7 +8,7 @@ Renan Carlos Silva Bonanno - RM 573043
 Murillo Dourado Vieira - RM 571912
 Henrique Gumbys Pagliato - RM 570914
 > **Link do projeto no Wokwi:** https://wokwi.com/projects/477403690792711169
-> **Link do vídeo (hands-on):** _(link do vídeo)_
+> **Link do vídeo (hands-on):** https://youtu.be/1pYxvc58QRk
 
 ---
 
@@ -420,9 +420,9 @@ Os dados seguem o modelo **IndoorEnvironmentObserved** do projeto Smart Data Mod
 
 ## 13. Demonstração em vídeo
 
-O vídeo mostra: o circuito e o código no Wokwi, a captura dos dados do DHT22 e do LDR, o MyMQTT recebendo os dados em `/attrs`, o envio dos comandos `on`/`off` acendendo o LED e as checagens no Postman (entidade no Orion e histórico no STH-Comet).
+O vídeo mostra: o circuito e o código no Wokwi, a captura dos dados do DHT22 e do LDR, o MyMQTT recebendo os dados em `/attrs` e o envio dos comandos `on`/`off` acendendo o LED.
 
-Link: _(link do vídeo)_
+Link: https://youtu.be/1pYxvc58QRk
 
 ## 14. Tecnologias
 
