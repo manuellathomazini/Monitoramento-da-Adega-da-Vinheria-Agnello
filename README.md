@@ -7,6 +7,7 @@ Manuella Sousa Thomazini - RM 573606
 Renan Carlos Silva Bonanno - RM 573043
 Murillo Dourado Vieira - RM 571912
 Henrique Gumbys Pagliato - RM 570914
+> **Repositório no GitHub:** https://github.com/manuellathomazini/Monitoramento-da-Adega-da-Vinheria-Agnello.git
 > **Link do projeto no Wokwi:** https://wokwi.com/projects/477403690792711169
 > **Link do vídeo (hands-on):** https://youtu.be/1pYxvc58QRk
 
